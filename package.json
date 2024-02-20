@@ -1,0 +1,12 @@
+{
+  "name": "nodejslv1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jovid18/nodejslv1.git",
+  "author": "jovid_18 <cshcho99@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.3"
+  }
+}
