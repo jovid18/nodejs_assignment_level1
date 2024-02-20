@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send("Hello World!");
+  return res.send("Hello World!");
 });
 
 app.use("/api", productRouter);
