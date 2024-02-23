@@ -1,10 +1,12 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import connect from './schemas/index.js';
 import productRouter from './routes/products.router.js';
 import notFoundErrorHandler from './middlewares/notFoundError.middleware.js';
 import generalErrorHandler from './middlewares/generalError.middleware.js';
+dotenv.config();
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 connect();
 
