@@ -66,6 +66,7 @@ class ProductController {
     }
     const { productId } = req.params;
     const { password } = req.body;
+    console.log(productId, password);
     const product = await productService.getProductById(productId);
     if (!product) {
       return res.status(404).json({ message: '상품 조회에 실패하였습니다.' });
@@ -75,7 +76,9 @@ class ProductController {
         .status(401)
         .json({ message: '상품을 삭제할 권한이 존재하지 않습니다.' });
     }
+    console.log('deleteProduct');
     await productService.deleteProduct(productId);
+    return res.status(200).json({ message: '상품을 삭제하였습니다.' });
   }
 }
 
